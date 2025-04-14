@@ -65,6 +65,7 @@ Interact with Predix using natural commands:
 ### 💰 Tokenized Ecosystem
 - Support for ERC20 tokens including community coins.
 - Contract: [`PrediX`](https://sepolia.basescan.org/token/0xe21835fbe4df83a02d72a717fd8bc1dcbcc6c042)
+- txHash : https://sepolia.basescan.org/tx/0x811adf8ab6ec754dfc8c2eb601dc4851e18557e59b374c5c3f90d11e08e353b1
 
 ### 🛠️ Embedded Wallet Onboarding
 - Non-crypto users can onboard via embedded wallets.
