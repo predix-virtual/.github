@@ -1,4 +1,4 @@
-# 🧠 Predix - AI-Powered PvP Prediction Market
+# 🧠 Predix - AI Powered PvP Prediction Market
 
 **Turn your predictions into on-chain PvP battles — powered by AI agents and built on Base.**
 
@@ -11,6 +11,13 @@ Predix is a decentralized, AI-driven prediction platform where users can create 
 Predix simplifies speculative betting through natural language prompts and peer-to-peer matchups. Our platform uses AI to generate markets, resolve outcomes with real-world data, and ensure fair play via smart contracts — all on Base for fast, low-cost transactions.
 
 ---
+<p align="center">
+  <img src="https://predix-dev.s3.ap-northeast-2.amazonaws.com/Home%5Bconnect-wallet%5D_show-games.png" alt="Home - Show Games" width="45%" />
+  <img src="https://predix-dev.s3.ap-northeast-2.amazonaws.com/chatting_.png" alt="Chatting" width="45%" />
+</p>
+
+---
+
 
 ## 🔑 Key Features
 
