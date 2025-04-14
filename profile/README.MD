@@ -151,19 +151,15 @@ Predix is designed with a sustainable, scalable revenue model that grows alongsi
 
 ## 🧱 Tech Stack
 
-| Layer | Tech |
-|--------------|------|
-|**Chain** | Base
-|
-| **Smart Contracts** | Solidity + Hardhat
-|
-| **Oracles** | [`api-sports.io`](https://api-sports.io/), [`OKX Wallet`](https://www.okx.com/wallet-api)
-|
-| **Wallet/Swap** | Embedded wallets + 1inch Aggregator API
-|
-| **Tokens** | ERC20 (e.g., USDC, PrediX token) |
-| **AI** | GAME |
-| **AI models** | Llama-3.1-405B |
+| Layer             | Tech                                                                 |
+|------------------|----------------------------------------------------------------------|
+| **Chain**         | Base                                                                 |
+| **Smart Contracts** | Solidity + Hardhat                                                  |
+| **Oracles**        | [`api-sports.io`](https://api-sports.io/), [`OKX Wallet`](https://www.okx.com/wallet-api) |
+| **Wallet/Swap**    | Embedded wallets + 1inch Aggregator API                             |
+| **Tokens**         | ERC20 (e.g., USDC, PrediX token)                                     |
+| **AI**             | GAME                                                                 |
+| **AI Models**      | Llama-3.1-405B                                                       |
 
 
 ---
