@@ -153,8 +153,7 @@ Predix is designed with a sustainable, scalable revenue model that grows alongsi
 
 | Layer | Tech |
 |--------------|------|
-|
-**Chain** | Base
+|**Chain** | Base
 |
 | **Smart Contracts** | Solidity + Hardhat
 |
