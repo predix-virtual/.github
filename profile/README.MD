@@ -2,13 +2,18 @@
 
 **Turn your predictions into on-chain PvP battles — powered by AI agents and built on Base.**
 
-Predix is a decentralized, AI-driven prediction platform where users can create and join head-to-head markets using simple prompts. No confusing UX, no bridging hurdles — just AI-powered matchmaking, resolution, and payouts across chains.
+Predix is a decentralized, AI-driven prediction platform where users can create and join head-to-head markets using simple prompts. Our platform leverages the **GAME SDK's High-Level Planner (HLP) and Low-Level Planner (LLP)** architecture to automate market creation, matchmaking, oracle integration, resolution, and payouts seamlessly across chains. No confusing UX, no bridging hurdles — just intelligent automation driving PvP prediction markets.
 
 ---
 
 ## 🚀 Overview
 
-Predix simplifies speculative betting through natural language prompts and peer-to-peer matchups. Our platform uses AI to generate markets, resolve outcomes with real-world data, and ensure fair play via smart contracts — all on Base for fast, low-cost transactions.
+PrediX simplifies speculative betting through natural language prompts and peer-to-peer matchups. Our platform uses an AI agent system, built with the GAME SDK, featuring:
+
+1.  llama 3.1: Core model of the GAME sdk.
+2.  Workers: Specialized agents that execute specific tasks assigned by the HLP 
+
+This architecture enables automated market generation, outcome resolution using real-world data via oracles, and ensures fair play via smart contracts — all on Base for fast, low-cost transactions.
 
 ---
 <p align="center">
@@ -22,45 +27,52 @@ Predix simplifies speculative betting through natural language prompts and peer-
 ## 🔑 Key Features
 
 ### 🤖 AI-Powered Prediction Flow
-- AI agents auto-generate structured markets from prompts.
-- Example: _"Will Arsenal beat Tottenham this weekend?"_
-- Agents label outcomes, manage game status, and track resolution.
+- **Prompt Interpretation**: The Planner receives a user prompt (e.g., _"Will Arsenal beat Tottenham this weekend?"_) and delegates the parsing task to a specialized LLP (Worker).
+- **Structured Market Generation (LLP)**: An LLP, equipped with the necessary functions (`action_space`), structures the prediction market data .
+- **Lifecycle Management (HLP)**: The HLP oversees the entire market lifecycle, coordinating LLPs for tasks like status updates (open, locked, resolving, closed) and resolution tracking using GAME SDK's state management (`get_state_fn`).
 
 ### ⚔️ Peer-vs-Peer Matchmaking
 - No house edge — users face off directly.
-- AI agents handle entry fee logic, pairing, and fairness.
+- AI-Driven Fairness
 - Stake USDC, community tokens, or KoL tokens.
 
 ### 🌐 Cross-Chain Liquidity via Wormhole
 - Bring assets from Solana, Avalanche, or Optimism to Base in 1 click.
-- AI confirms token bridging and market participation in real-time.
+- **AI Confirmation**: An monitors bridging events and confirms token arrival and market participation in real-time, updating the system state.
 
 ### 🧾 Automated Resolution & Transparent Payouts
-- Game ends → AI fetches results from oracles (e.g., Arsenal wins 2-1).
-- Smart contract resolves outcome → Payouts issued instantly.
-- AI explains results in plain language.
+- **Oracle Interaction**: Game ends → HLP directs a specialized Oracle LLP to fetch results (e.g., query `api-sports.io` for "Arsenal wins 2-1") using pre-defined `Functions`.
+- **Smart Contract Execution**: Based on the verified outcome, another triggers the resolution logic in the smart contract → Payouts issued instantly.
+- **AI Explanation**: A dedicated Explanation LLP synthesizes the fetched data and execution steps to provide results in plain language.
 
 ---
 
-## 🧠 AI-Powered Prompt System
+## 🧠 AI Architecture: Leveraging GAME SDK's HLP/LLP
 
-Interact with Predix using natural commands:
+Predix's AI capabilities are built upon the **GAME SDK**, employing a hierarchical planning model:
 
-- _"Create a BTC prediction for next 48 hours. Bet 2 ETH on UP."_
-- _"Join the third prediction with 10 USDC."_
-- _"List top 5 active predictions by total stake."_
-- _"Show my history and claim rewards."_
+1.  **High-Level Planner (HLP - The `Agent`)**:
+    *   **Role**: The central coordinator, responsible for achieving the overall `agent_goal`
+
+2.  **Low-Level Planners (LLPs - The `Workers`)**:
+    *   **Role**: Specialized task executors, each with a specific `worker_description` (e.g., "Oracle Interaction Worker," "Smart Contract Interaction Worker,").
+
+3.  **State Management (`get_state_fn`)**: Both HLP and LLPs use state functions to maintain awareness of the environment (market status, user balances, oracle data availability) based on the results (`FunctionResult`) of executed actions.
+
+4.  **Foundation Models**: Powered by configurable llm (e.g., Llama-3.1-405B) to enable natural language understanding and sophisticated planning.
+
+This architecture allows Predix to handle complex workflows autonomously, adapt to new information, and maintain modularity for future upgrades.
 
 ---
 
 ## 🔗 How Predix Leverages Base
 
 ### ⚡ High-Speed, Feeless Transactions
-- Base's throughput = real-time bets, payouts, and AI automation.
+- Base's throughput = real-time bets, payouts, and efficient AI automation (LLPs trigger transactions quickly).
 
 ### 🔐 On-Chain Fairness
-- Solidity smart contracts (via Hardhat) handle market logic and resolution.
-- No centralized authority — just agents + code.
+- Solidity smart contracts (via Hardhat) handle market logic and resolution, triggered by authorized AI LLPs.
+- No centralized authority — just the HLP/LLP system orchestrating interactions with immutable code.
 
 ### 💰 Tokenized Ecosystem
 - Support for ERC20 tokens including community coins.
@@ -69,7 +81,7 @@ Interact with Predix using natural commands:
 
 ### 🛠️ Embedded Wallet Onboarding
 - Non-crypto users can onboard via embedded wallets.
-- Optional top-up via swaps (1inch Aggregator API) and fiat ramps (coming soon).
+- Optional top-up via swaps (1inch Aggregator API) and fiat ramps (coming soon). AI LLPs can potentially assist in guiding users through these processes.
 
 ---
 
@@ -83,7 +95,7 @@ Predix is designed with a sustainable, scalable revenue model that grows alongsi
 
 > 🟢 **Example**: In a 100 USDC game, 3 USDC goes to the platform, and 97 USDC is distributed to the winner(s).
 
-- Transparent fee logic handled entirely on-chain.
+- Transparent fee logic handled entirely on-chain, potentially monitored or verified by an AI LLP for reporting.
 - Scales naturally with prediction volume and user participation.
 
 ### 2. Featured Prediction Listings (Coming Soon)
@@ -91,7 +103,7 @@ Predix is designed with a sustainable, scalable revenue model that grows alongsi
 - Featured games appear in:
   - Homepage spotlight
   - Leaderboards
-  - Integrated Twitter (X) feed via Blink
+  - Integrated Twitter (X) feed via Blink (Potentially managed by an AI LLP interacting with Twitter APIs).
 
 > 💡 Fees accepted in USDC or ecosystem/partner tokens.
 
@@ -101,7 +113,7 @@ Predix is designed with a sustainable, scalable revenue model that grows alongsi
 ### 3. Optional Add-Ons (Monetization Expansion)
 - **Branded Tournaments**:
   - Run sponsored competitions with co-funded prize pools.
-  - Partner with DAOs, sports brands, or gaming communities.
+  - Partner with DAOs, sports brands, or gaming communities. AI LLPs could assist in tournament setup and management.
 
 - **Revenue-Sharing with Creators**:
   - Top-performing creators and KoLs receive a share of platform revenue from their hosted games.
@@ -129,27 +141,36 @@ Predix is designed with a sustainable, scalable revenue model that grows alongsi
 
 ### 👩‍💼 KoL & Creator Economy Synergy
 - PvP predictions are viral and community-powered.
-- Creators drive engagement and monetize audience.
+- Creators drive engagement and monetize audience, potentially leveraging AI tools for market creation.
 
 ### 🤖 AI + Real-Time Data = The Future
-- AI agents create, resolve, and explain prediction markets.
-- No more manual admin, delayed results, or clunky UX.
+- AI agents resolve, and explain prediction markets autonomously.
+- Reduces manual admin, speeds up resolution, and enhances user experience compared to traditional or less automated platforms.
 
 ---
 
 ## 🧱 Tech Stack
 
-| Layer        | Tech |
+| Layer | Tech |
 |--------------|------|
-| **Chain**    | Base |
-| **Smart Contracts** | Solidity + Hardhat |
-| **Oracles**  | [`api-sports.io`](https://api-sports.io/), [`OKX Wallet`](https://www.okx.com/wallet-api) |
-| **Wallet/Swap** | Embedded wallets + 1inch Aggregator API |
-| **Tokens**   | ERC20 (e.g., USDC, PrediX token) |
+|
+**Chain** | Base
+|
+| **Smart Contracts** | Solidity + Hardhat
+|
+| **Oracles** | [`api-sports.io`](https://api-sports.io/), [`OKX Wallet`](https://www.okx.com/wallet-api)
+|
+| **Wallet/Swap** | Embedded wallets + 1inch Aggregator API
+|
+| **Tokens** | ERC20 (e.g., USDC, PrediX token) |
+| **AI** | GAME |
+| **AI models** | Llama-3.1-405B |
+
 
 ---
 
-## 🔐 Governance & Security
+##
+🔐 Governance & Security
 
 - AI-based resolution verification + oracle fallback.
 - Smart contract immutability ensures fairness.
@@ -160,10 +181,11 @@ Predix is designed with a sustainable, scalable revenue model that grows alongsi
 
 ## 🤝 Contribute
 
-We welcome contributors! Open issues, suggest features, or submit a pull request. Help shape the future of AI-powered PvP markets.
+We welcome contributors! Open issues, suggest features, or submit a pull request. Help shape the future of AI-powered PvP markets using advanced agent architectures.
 
 ---
 
 ## 📄 License
 
 This project is licensed under the [MIT License](./LICENSE).
+
