@@ -73,15 +73,6 @@ Interact with Predix using natural commands:
 
 ---
 
-## 📱 SocialFi & Creator Tools
-
-- **PnL NFT Cards**: Mint NFTs showing your win/loss record.
-- **In-App Chat**: TalkJS or Sendbird integration for live discussions.
-- **Twitter (X) Blink**: Create or join predictions directly from X posts.
-- **Creator Markets**: KoLs can launch branded markets and earn revenue share.
-
----
-
 ## 💸 Business Model – PvP Prediction Platform
 
 Predix is designed with a sustainable, scalable revenue model that grows alongside user activity and community engagement.
