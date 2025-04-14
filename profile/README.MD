@@ -1,112 +1,170 @@
-# Predix - AI-Powered PvP Prediction Market
+# 🧠 Predix - AI-Powered PvP Prediction Market
 
-## Overview
-Predix is an AI-driven, prompt-based PvP prediction market built on the Base blockchain. The platform enhances reliability through decentralized smart contract logic, real-time oracle data, and AI-powered automation for market creation, resolution, and payouts. Predix enables users to create and participate in prediction markets seamlessly, leveraging Base’s high-speed, low-cost transactions.
+**Turn your predictions into on-chain PvP battles — powered by AI agents and built on Base.**
 
----
-
-## Key Features
-
-### ✅ AI-Powered Prediction Markets
-- AI agents automate market creation, answer selection, and resolution.
-- Smart contracts ensure fair and transparent outcomes.
-- Real-world data is retrieved from trusted API providers (e.g., `api-sports.io` for sports, OKX Wallet API for crypto).
-
-### ✅ On-Chain Betting System on Base
-- Users bet on predefined outcomes in a decentralized environment.
-- All transactions are recorded on-chain, ensuring transparency.
-- Market resolution is fully automated using AI and on-chain governance.
-
-### ✅ Base-Optimized Trading & Wallet System
-- Users deposit ETH into an embedded wallet to place bets.
-- Integrated with Jupiter API for seamless swaps between Eth, altcoins, and meme coins.
-- Future support for EVM asset top-up and cash-out solutions.
-
-### ✅ SocialFi & Community Engagement
-- **PnL NFT Cards**: Users can mint and share performance-based NFTs via Metaplex.
-- **In-App Chat & Networking**: Social features powered by TalkJS or Sendbird.
-- **Blink Integration for X (Twitter) Interaction**: Create and join markets directly from X.
-
-### ✅ Fast, Feeless Transactions
-- Users can place bets with minimal transaction fees thanks to Base’s low-cost architecture.
-- Optimized for real-time, high-frequency trading.
-
-### ✅ AI-Powered Prompt System
-- Users can interact with the platform through natural language commands:
-  - _"Create a prediction for the Man City vs Tottenham match next week. Bet 1 Eth on Tottenham."_
-  - _"Show me ongoing predictions."_
-  - _"Join the second prediction with 2 Eth."_
-  - _"Create a BTC price up/down prediction, starting today at 12 PM UTC, resolution in 48 hours. Bet 2 ETh on UP."_
-  - _"List ongoing predictions by highest bet."_
-  - _"Show my winning predictions and claim all rewards."_
+Predix is a decentralized, AI-driven prediction platform where users can create and join head-to-head markets using simple prompts. No confusing UX, no bridging hurdles — just AI-powered matchmaking, resolution, and payouts across chains.
 
 ---
 
-## How Predix Leverages Base
+## 🚀 Overview
 
-### 🔹 High-Speed Transactions
-- Base’s high throughput enables real-time market creation and settlement.
-- Low-latency transactions ensure instant bet placements and payouts.
-
-### 🔹 Decentralized Smart Contracts
-- Built with Hardhat, Base’s Solidity-based smart contract framework.
-- Fully automated resolution process with immutable on-chain verification.
-
-### 🔹 Tokenized Economy with Erc20 Tokens
-- Users deposit and withdraw funds using Base’s Erc20 token standard.
-- Rewards and payouts are distributed instantly without intermediaries.
-
-### 🔹 Secure & Efficient Betting Mechanism
-- Embedded wallets allow seamless onboarding for non-crypto users.
-- Market outcomes are determined on-chain, ensuring fairness and transparency.
+Predix simplifies speculative betting through natural language prompts and peer-to-peer matchups. Our platform uses AI to generate markets, resolve outcomes with real-world data, and ensure fair play via smart contracts — all on Base for fast, low-cost transactions.
 
 ---
 
-## Key Technologies
-- **Programming Language**: Solidity
-- **Blockchain**: Base
-- **Smart Contract Framework**: [Hardhat](https://github.com/NomicFoundation/hardhat/)
-- **Oracles & APIs**:
-  - [api-sports.io](https://api-sports.io/) (sports data)
-  - [OKX Wallet API](https://www.okx.com/wallet-api) (crypto data)
-- **Token Standards**:
-  - ERC20 Token
-  - Token Name : PrediX
-  - https://sepolia.basescan.org/token/0xe21835fbe4df83a02d72a717fd8bc1dcbcc6c042
+## 🔑 Key Features
+
+### 🤖 AI-Powered Prediction Flow
+- AI agents auto-generate structured markets from prompts.
+- Example: _"Will Arsenal beat Tottenham this weekend?"_
+- Agents label outcomes, manage game status, and track resolution.
+
+### ⚔️ Peer-vs-Peer Matchmaking
+- No house edge — users face off directly.
+- AI agents handle entry fee logic, pairing, and fairness.
+- Stake USDC, community tokens, or KoL tokens.
+
+### 🌐 Cross-Chain Liquidity via Wormhole
+- Bring assets from Solana, Avalanche, or Optimism to Base in 1 click.
+- AI confirms token bridging and market participation in real-time.
+
+### 🧾 Automated Resolution & Transparent Payouts
+- Game ends → AI fetches results from oracles (e.g., Arsenal wins 2-1).
+- Smart contract resolves outcome → Payouts issued instantly.
+- AI explains results in plain language.
 
 ---
 
-## Governance & Security
-### 🔹 Fair Play & Anti-Manipulation Measures
-- AI verification for prediction integrity.
-- Strict security policies to prevent market manipulation.
+## 🧠 AI-Powered Prompt System
 
-### 🔹 User Protection & Compliance
-- Embedded wallet security mechanisms.
-- Adheres to DeFi best practices for transparent financial operations.
+Interact with Predix using natural commands:
 
-### 🔹 Policy Updates & Community Governance
-- Regular policy reviews based on user feedback.
-- Transparent governance with community-driven updates.
+- _"Create a BTC prediction for next 48 hours. Bet 2 ETH on UP."_
+- _"Join the third prediction with 10 USDC."_
+- _"List top 5 active predictions by total stake."_
+- _"Show my history and claim rewards."_
 
 ---
 
-## Business Model
-Predix operates on a sustainable revenue model through transaction-based fees and SocialFi partnerships:
+## 🔗 How Predix Leverages Base
 
-### 🔹 Market Resolution Fee
-- A **3% fee** is deducted from the total payout of completed predictions to sustain platform operations.
+### ⚡ High-Speed, Feeless Transactions
+- Base's throughput = real-time bets, payouts, and AI automation.
 
-### 🔹 SocialFi Engagement & Ads
-- Sponsored prediction markets.
-- In-app chat monetization through integrated promotions.
+### 🔐 On-Chain Fairness
+- Solidity smart contracts (via Hardhat) handle market logic and resolution.
+- No centralized authority — just agents + code.
+
+### 💰 Tokenized Ecosystem
+- Support for ERC20 tokens including community coins.
+- Contract: [`PrediX`](https://sepolia.basescan.org/token/0xe21835fbe4df83a02d72a717fd8bc1dcbcc6c042)
+
+### 🛠️ Embedded Wallet Onboarding
+- Non-crypto users can onboard via embedded wallets.
+- Optional top-up via swaps (1inch Aggregator API) and fiat ramps (coming soon).
 
 ---
 
-## Contribution
-Contributions are welcome! Feel free to open issues and submit pull requests.
+## 📱 SocialFi & Creator Tools
+
+- **PnL NFT Cards**: Mint NFTs showing your win/loss record.
+- **In-App Chat**: TalkJS or Sendbird integration for live discussions.
+- **Twitter (X) Blink**: Create or join predictions directly from X posts.
+- **Creator Markets**: KoLs can launch branded markets and earn revenue share.
 
 ---
 
-## License
-This project is licensed under the MIT License.
+## 💸 Business Model – PvP Prediction Platform
+
+Predix is designed with a sustainable, scalable revenue model that grows alongside user activity and community engagement.
+
+### 1. Platform Fee from Each Game
+- A **customizable fee (default 3%)** is taken from the total wager pool of each game.
+- This fee ensures long-term platform sustainability without relying on external funding.
+
+> 🟢 **Example**: In a 100 USDC game, 3 USDC goes to the platform, and 97 USDC is distributed to the winner(s).
+
+- Transparent fee logic handled entirely on-chain.
+- Scales naturally with prediction volume and user participation.
+
+### 2. Featured Prediction Listings (Coming Soon)
+- **Creators, KoLs, or token projects** can pay to highlight their games.
+- Featured games appear in:
+  - Homepage spotlight
+  - Leaderboards
+  - Integrated Twitter (X) feed via Blink
+
+> 💡 Fees accepted in USDC or ecosystem/partner tokens.
+
+- Helps communities **showcase their tokens in real-world prediction use cases**.
+- Opens doors for **cross-project collaboration and co-marketing**.
+
+### 3. Optional Add-Ons (Monetization Expansion)
+- **Branded Tournaments**:
+  - Run sponsored competitions with co-funded prize pools.
+  - Partner with DAOs, sports brands, or gaming communities.
+
+- **Revenue-Sharing with Creators**:
+  - Top-performing creators and KoLs receive a share of platform revenue from their hosted games.
+  - Builds loyalty and incentivizes community-driven growth.
+
+### Future Opportunities
+- **Ad-Supported Prediction Streams**:
+  - Monetize traffic via embedded ads, sponsored prompts, or native tokens.
+- **Subscription-Based Premium Features**:
+  - Advanced analytics, early access to AI-generated markets, or zero-fee betting tiers.
+- **NFT Utility & Gamification**:
+  - Offer discounts, exclusive matches, or higher rewards to NFT holders.
+
+---
+
+## 🌍 Market Opportunity
+
+### 📈 Speculation as Engagement
+- Prediction = gamified betting on what people already care about.
+- $200B+ market covering sports, crypto, politics, and pop culture.
+
+### 🎮 Rise of Onchain Gamified Finance
+- Prediction = perfect blend of SocialFi, GameFi, and DeFi.
+- Inspired by platforms like Polymarket, Helix, and friend.tech.
+
+### 👩‍💼 KoL & Creator Economy Synergy
+- PvP predictions are viral and community-powered.
+- Creators drive engagement and monetize audience.
+
+### 🤖 AI + Real-Time Data = The Future
+- AI agents create, resolve, and explain prediction markets.
+- No more manual admin, delayed results, or clunky UX.
+
+---
+
+## 🧱 Tech Stack
+
+| Layer        | Tech |
+|--------------|------|
+| **Chain**    | Base |
+| **Smart Contracts** | Solidity + Hardhat |
+| **Oracles**  | [`api-sports.io`](https://api-sports.io/), [`OKX Wallet`](https://www.okx.com/wallet-api) |
+| **Wallet/Swap** | Embedded wallets + 1inch Aggregator API |
+| **Tokens**   | ERC20 (e.g., USDC, PrediX token) |
+
+---
+
+## 🔐 Governance & Security
+
+- AI-based resolution verification + oracle fallback.
+- Smart contract immutability ensures fairness.
+- Regular audits and community governance.
+- Wallet protection & withdrawal guardrails for safety.
+
+---
+
+## 🤝 Contribute
+
+We welcome contributors! Open issues, suggest features, or submit a pull request. Help shape the future of AI-powered PvP markets.
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](./LICENSE).
