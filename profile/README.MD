@@ -63,24 +63,16 @@ Predix is an AI-driven, prompt-based PvP prediction market built on the Base blo
 ---
 
 ## Key Technologies
-- **Programming Language**: Rust
+- **Programming Language**: Solidity
 - **Blockchain**: Base
 - **Smart Contract Framework**: [Hardhat](https://github.com/NomicFoundation/hardhat/)
 - **Oracles & APIs**:
   - [api-sports.io](https://api-sports.io/) (sports data)
   - [OKX Wallet API](https://www.okx.com/wallet-api) (crypto data)
 - **Token Standards**:
-  - ERc20 Token
-  - 0xE21835FBE4Df83a02D72a717Fd8BC1dcBCC6C042
-
----
-
-## Environment Setup
-Ensure the following environment variables are configured:
-```env
-RPC_URL=<your_sol_rpc_url>
-PREDIX_PROGRAM_ID=<your_predix_smart_contract_address>
-```
+  - ERC20 Token
+  - Token Name : PrediX
+  - https://sepolia.basescan.org/token/0xe21835fbe4df83a02d72a717fd8bc1dcbcc6c042
 
 ---
 
